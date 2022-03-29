@@ -11,14 +11,11 @@ const Posts = () => {
   return (
     <div>
       <h2>Posts : {posts.length}</h2>
-      {
-      posts.map((post) => (
-        <Link 
-        key={post.id} 
-        to={`/posts/${post.id}`}
-        >{post.id}</Link>
-      ))
-      }
+      {posts.map((post) => (
+        <Link key={post.id} to={`/posts/${post.id}`}>
+          {post.id}
+        </Link>
+      ))}
       <Outlet></Outlet>
     </div>
   );

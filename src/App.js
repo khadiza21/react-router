@@ -25,7 +25,7 @@ function App() {
         <Route path="/posts" element={<Posts></Posts>}>
           <Route path=":postId" element={<PostDetail></PostDetail>}></Route>
         </Route>
-        
+
         <Route path="/about" element={<About></About>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
