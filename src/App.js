@@ -6,6 +6,9 @@ import About from "./component/About/About";
 import NotFound from "./component/NotFount/NotFound";
 import Header from "./component/Header/Header";
 import FriendDetail from "./component/FriendDetail/FriendDetail";
+import Posts from "./component/Posts/Posts";
+import PostDetail from "./component/PostDetail.js/PostDetail";
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,11 @@ function App() {
           path="friend/:friendId"
           element={<FriendDetail></FriendDetail>}
         ></Route>
+
+        <Route path="/posts" element={<Posts></Posts>}>
+          <Route path=":postId" element={<PostDetail></PostDetail>}></Route>
+        </Route>
+        
         <Route path="/about" element={<About></About>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>

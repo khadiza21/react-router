@@ -6,7 +6,7 @@ const FriendDetail = () => {
   const [friend, setFriend] = useState({});
   useEffect(() => {
     const url = `https://jsonplaceholder.typicode.com/users/${friendId}`;
-    console.log(url);
+ 
     fetch(url)
       .then((res) => res.json())
       .then((data) => setFriend(data));
